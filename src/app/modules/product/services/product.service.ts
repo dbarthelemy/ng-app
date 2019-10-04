@@ -2,14 +2,17 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { of } from 'rxjs/internal/observable/of';
 import { map, filter, reduce } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
+import { Observable } from 'rxjs';
+import { Product } from '../models/product';
 
 @Injectable()
 export class ProductService {
 
   constructor(private http: HttpClient) { }
 
-  getProducts() {
-    //    this.http.get();
+  getProducts(): Observable<Product[]> {
+    return this.http.get<Product[]>(environment.apiBaseUrl + '/products');
   }
 
   testObservable() {
