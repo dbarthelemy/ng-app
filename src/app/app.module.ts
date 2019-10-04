@@ -8,7 +8,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { GetStartedComponent } from './components/get-started/get-started.component';
 
-import { MaterialModule } from './material.module';
+import { SharedModule } from './modules/shared/shared.module';
 import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
@@ -23,7 +23,7 @@ import { HomeComponent } from './components/home/home.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
