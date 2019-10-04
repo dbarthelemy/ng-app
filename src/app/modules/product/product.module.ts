@@ -6,6 +6,7 @@ import { ProductListComponent } from './components/product-list/product-list.com
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { ProductRoutingModule } from './product-routing.module';
 import { SharedModule } from '../shared/shared.module';
+import { ProductService } from './services/product.service';
 
 
 
@@ -15,6 +16,9 @@ import { SharedModule } from '../shared/shared.module';
     CommonModule,
     ProductRoutingModule,
     SharedModule
+  ],
+  providers: [
+    ProductService
   ]
 })
 export class ProductModule { }
