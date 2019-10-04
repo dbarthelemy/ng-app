@@ -1,6 +1,8 @@
+@import '../../../../../styles.scss';
+
 .product-card {
     max-width: 300px;
     margin: 15px;
-    background-color: lightgray;
+    background-color: $accent;
 }
   
